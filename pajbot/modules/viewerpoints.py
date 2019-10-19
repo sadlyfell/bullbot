@@ -89,7 +89,7 @@ class MassPointsModule(BaseModule):
                         userInstance.points += givePoints
 
         bot.say(
-            "{} just gave {} viewers {} points each! Enjoy FeelsGoodMan".format(
+            "{} just gave {} viewers {:,} points each! Enjoy FeelsGoodMan".format(
                 source.username_raw, numUsers, givePoints
             )
         )

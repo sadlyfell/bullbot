@@ -114,7 +114,7 @@ class TopModule(BaseModule):
         data = []
         with DBManager.create_session_scope() as db_session:
             for user in db_session.query(User).order_by(User.points.desc())[: self.settings["num_top"]]:
-                data.append("{user.username_raw} ({user.points})".format(user=user))
+                data.append("{} ({:,})".format(user.username_raw, int(user.points)))
 
         bot.say("Top {num_top} banks: {data}".format(num_top=self.settings["num_top"], data=", ".join(data)))
 
