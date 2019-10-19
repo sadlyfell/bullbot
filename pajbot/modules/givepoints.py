@@ -114,13 +114,13 @@ class GivePointsModule(BaseModule):
 
             bot.whisper(
                 source.username,
-                "Successfully gave away {num_points} points to {target.username_raw}".format(
+                "Successfully gave away {num_points:,} points to {target.username_raw}".format(
                     num_points=num_points, target=target
                 ),
             )
             bot.whisper(
                 target.username,
-                "{source.username_raw} just gave you {num_points} points! You should probably thank them ;-)".format(
+                "{source.username_raw} just gave you {num_points:,} points! You should probably thank them ;-)".format(
                     num_points=num_points, source=source
                 ),
             )
