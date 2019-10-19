@@ -138,7 +138,7 @@ class SubAlertModule(BaseModule):
 
         user.points += self.settings["grant_points_on_sub"]
         self.bot.say(
-            "{} was given {} points for subscribing! FeelsAmazingMan".format(
+            "{} was given {:,} points for subscribing! FeelsAmazingMan".format(
                 user.username_raw, self.settings["grant_points_on_sub"]
             )
         )
@@ -328,7 +328,7 @@ class SubAlertModule(BaseModule):
                 addPoints = int(addPoints * ((0.025 * subMonths) + 1))
             source.points += addPoints
             self.bot.say(
-                "{} has been given {} points for {}sebbin {}FreakinStinkin".format(
+                "{} has been given {:,} points for {}sebbin {}FreakinStinkin".format(
                     source.username, addPoints, tierSub, monthText
                 )
             )
